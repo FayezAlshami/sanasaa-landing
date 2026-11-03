@@ -1,0 +1,37 @@
+1:"$Sreact.fragment"
+2:"/sanasaa-landing/_next/static/chunks/3tikh2loz_kdw.js"
+3:"/sanasaa-landing/_next/static/chunks/0s1b-xvttc6id.js"
+4:I[1801,["$2","$3"],"default"]
+5:I[39756,["$2","$3"],"default"]
+6:I[37457,["$2","$3"],"default"]
+8:"/sanasaa-landing/_next/static/chunks/0oxb3z6_37ii2.js"
+9:I[8787,["$2","$3","$8"],"default"]
+a:I[76893,["$2","$3","$8"],"default"]
+b:I[77258,["$2","$3","$8"],"default"]
+c:I[89262,["$2","$3","$8"],"default"]
+d:I[14999,["$2","$3","$8"],"default"]
+e:I[46655,["$2","$3","$8"],"default"]
+f:I[49256,["$2","$3","$8"],"default"]
+10:I[34060,["$2","$3","$8"],"default"]
+11:I[37528,["$2","$3","$8"],"default"]
+12:I[82811,["$2","$3","$8"],"default"]
+13:I[39961,["$2","$3","$8"],"default"]
+14:I[7099,["$2","$3","$8"],"default"]
+15:I[47710,["$2","$3","$8"],"default"]
+16:I[81469,["$2","$3","$8"],"default"]
+17:I[97367,["$2","$3"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:"ViewportBoundary"
+1b:I[97367,["$2","$3"],"$1a"]
+1d:"MetadataBoundary"
+1e:I[97367,["$2","$3"],"$1d"]
+20:I[68027,["$2","$3"],"default",1]
+:HL["/sanasaa-landing/_next/static/chunks/3g83o6-lcwt9_.css","style"]
+:HL["/sanasaa-landing/_next/static/media/4fb4363ca5982ca4-s.p.40_3w74kn95bo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/sanasaa-landing/_next/static/media/f9a7f4f17784fbaa-s.p.08tn9snzkmifr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+7:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","main",null,{"className":"relative overflow-x-hidden","children":[["$","$L9",null,{"className":"start-[-10%] top-[120vh] w-[520px]"}],["$","$L9",null,{"className":"end-[-12%] top-[280vh] w-[480px] rotate-180"}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}]]}],[["$","script","script-0",{"src":"/sanasaa-landing/_next/static/chunks/0oxb3z6_37ii2.js","async":true,"nonce":"$undefined"}]],["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/sanasaa-landing/_next/static/chunks/3g83o6-lcwt9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/sanasaa-landing/_next/static/chunks/3tikh2loz_kdw.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/sanasaa-landing/_next/static/chunks/0s1b-xvttc6id.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ar","dir":"rtl","className":"X0xcqq_variable h-full antialiased","children":["$","body",null,{"className":"min-h-full bg-navy-deep font-sans text-cream","children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],"p":false,"v":null},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1b",null,{"children":"$L1c"}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$18",null,{"name":"Next.Metadata","children":"$L1f"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$20",[["$","link","0",{"rel":"stylesheet","href":"/sanasaa-landing/_next/static/chunks/3g83o6-lcwt9_.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"5pwUZzWSekzmPsnUUAvms"}
+1c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+21:I[27201,["$2","$3"],"IconMark"]
+19:null
+1f:[["$","title","0",{"children":"سنسعى | منصة التعليم الثانوي"}],["$","meta","1",{"name":"description","content":"منصة سنسعى للتعليم الثانوي في سوريا: دروس فيديو، امتحانات ذكية، نقاط ومكافآت، ومتصدرين لطلاب البكالوريا وأولياء الأمور."}],["$","meta","2",{"property":"og:title","content":"سنسعى | منصة التعليم الثانوي"}],["$","meta","3",{"property":"og:description","content":"ادرس بثقة، تدرّب بذكاء، وتفوّق في البكالوريا مع سنسعى."}],["$","meta","4",{"property":"og:locale","content":"ar_SY"}],["$","meta","5",{"property":"og:image","content":"https://sanasaa.app/sanasaa-landing/brand/logo.png"}],["$","meta","6",{"property":"og:type","content":"website"}],["$","meta","7",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","8",{"name":"twitter:title","content":"سنسعى | منصة التعليم الثانوي"}],["$","meta","9",{"name":"twitter:description","content":"ادرس بثقة، تدرّب بذكاء، وتفوّق في البكالوريا مع سنسعى."}],["$","meta","10",{"name":"twitter:image","content":"https://sanasaa.app/sanasaa-landing/brand/logo.png"}],["$","link","11",{"rel":"icon","href":"/sanasaa-landing/brand/logo.png"}],["$","link","12",{"rel":"apple-touch-icon","href":"/sanasaa-landing/brand/logo.png"}],["$","$L21","13",{}]]
