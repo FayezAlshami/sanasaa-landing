@@ -33,15 +33,22 @@ export default function HowItWorks() {
           },
         );
       }
-      gsap.utils.toArray<HTMLElement>(".step-card").forEach((el, i) => {
-        gsap.from(el, {
-          x: i % 2 === 0 ? 60 : -60,
-          opacity: 0,
-          duration: 0.9,
+      const cards = gsap.utils.toArray<HTMLElement>(".step-card");
+      gsap.fromTo(
+        cards,
+        { y: 40, autoAlpha: 0.45 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          stagger: 0.12,
+          duration: 0.85,
           ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 80%" },
-        });
-      });
+          immediateRender: false,
+          scrollTrigger: { trigger: root.current, start: "top 75%", once: true },
+        },
+      );
+      const safety = window.setTimeout(() => gsap.set(cards, { clearProps: "opacity,visibility,transform" }), 4000);
+      return () => window.clearTimeout(safety);
     }, root);
     return () => ctx.revert();
   }, [reduced]);

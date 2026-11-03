@@ -17,14 +17,20 @@ export default function Points() {
   useEffect(() => {
     if (!root.current || reduced) return;
     const ctx = gsap.context(() => {
-      gsap.from(card.current, {
-        rotateY: -25,
-        z: -120,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: { trigger: card.current, start: "top 80%" },
-      });
+      if (card.current) {
+        gsap.fromTo(
+          card.current,
+          { y: 30, autoAlpha: 0.5 },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            immediateRender: false,
+            scrollTrigger: { trigger: card.current, start: "top 85%", once: true },
+          },
+        );
+      }
       gsap.to(".coin", {
         y: -16,
         rotation: 12,

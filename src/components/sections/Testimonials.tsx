@@ -17,15 +17,21 @@ export default function Testimonials() {
   useEffect(() => {
     if (!root.current || reduced) return;
     const ctx = gsap.context(() => {
-      gsap.from(".t-card", {
-        y: 70,
-        opacity: 0,
-        rotateZ: -2,
-        stagger: 0.12,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: { trigger: root.current, start: "top 70%" },
-      });
+      gsap.fromTo(
+        ".t-card",
+        { y: 40, autoAlpha: 0.45 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          stagger: 0.1,
+          duration: 0.8,
+          ease: "power3.out",
+          immediateRender: false,
+          scrollTrigger: { trigger: root.current, start: "top 78%", once: true },
+        },
+      );
+      const safety = window.setTimeout(() => gsap.set(".t-card", { clearProps: "opacity,visibility,transform" }), 4000);
+      return () => window.clearTimeout(safety);
     }, root);
     return () => ctx.revert();
   }, [reduced]);

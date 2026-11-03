@@ -17,15 +17,22 @@ export default function Subjects() {
   useEffect(() => {
     if (!root.current || reduced) return;
     const ctx = gsap.context(() => {
-      gsap.from(".subject-chip", {
-        scale: 0.7,
-        opacity: 0,
-        y: 30,
-        stagger: 0.04,
-        duration: 0.6,
-        ease: "back.out(1.7)",
-        scrollTrigger: { trigger: ".subject-grid", start: "top 80%" },
-      });
+      gsap.fromTo(
+        ".subject-chip",
+        { scale: 0.92, autoAlpha: 0.5, y: 20 },
+        {
+          scale: 1,
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.04,
+          duration: 0.55,
+          ease: "back.out(1.7)",
+          immediateRender: false,
+          scrollTrigger: { trigger: ".subject-grid", start: "top 80%", once: true },
+        },
+      );
+      const safety = window.setTimeout(() => gsap.set(".subject-chip", { clearProps: "opacity,visibility,transform" }), 4000);
+      return () => window.clearTimeout(safety);
     }, root);
     return () => ctx.revert();
   }, [reduced]);

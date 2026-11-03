@@ -34,25 +34,38 @@ export default function TextReveal({
       .map((p) => {
         const safe = p === " " ? "&nbsp;" : p;
         const cls = mode === "chars" ? "split-char" : "split-word";
-        return `<span class="inline-block overflow-hidden align-bottom"><span class="${cls} inline-block translate-y-[120%] opacity-0">${safe}${mode === "words" ? "&nbsp;" : ""}</span></span>`;
+        // Visible by default — animation only enhances
+        return `<span class="inline-block overflow-hidden align-bottom"><span class="${cls} inline-block">${safe}${mode === "words" ? "&nbsp;" : ""}</span></span>`;
       })
       .join("");
 
     const targets = el.querySelectorAll(`.${mode === "chars" ? "split-char" : "split-word"}`);
-    const anim = gsap.to(targets, {
-      y: "0%",
-      opacity: 1,
-      duration: 0.85,
-      stagger: mode === "chars" ? 0.02 : 0.05,
-      ease: "power3.out",
-      delay,
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%",
+    const anim = gsap.fromTo(
+      targets,
+      { y: "40%", autoAlpha: 0.35 },
+      {
+        y: "0%",
+        autoAlpha: 1,
+        duration: 0.7,
+        stagger: mode === "chars" ? 0.015 : 0.04,
+        ease: "power3.out",
+        delay,
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          once: true,
+        },
       },
-    });
+    );
+
+    // Safety: force visible if trigger never fires
+    const safety = window.setTimeout(() => {
+      gsap.set(targets, { y: "0%", autoAlpha: 1, clearProps: "opacity,visibility,transform" });
+    }, 3500);
 
     return () => {
+      window.clearTimeout(safety);
       anim.scrollTrigger?.kill();
       anim.kill();
     };

@@ -18,14 +18,18 @@ export default function Download() {
   useEffect(() => {
     if (!root.current || reduced) return;
     const ctx = gsap.context(() => {
-      gsap.from(".dl-panel", {
-        scale: 0.94,
-        opacity: 0,
-        y: 60,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: root.current, start: "top 70%" },
-      });
+      gsap.fromTo(
+        ".dl-panel",
+        { y: 36, autoAlpha: 0.5 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.85,
+          ease: "power3.out",
+          immediateRender: false,
+          scrollTrigger: { trigger: root.current, start: "top 75%", once: true },
+        },
+      );
       gsap.to(".dl-orb", {
         rotate: 360,
         duration: 40,

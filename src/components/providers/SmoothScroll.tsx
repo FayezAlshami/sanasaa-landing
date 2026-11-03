@@ -4,13 +4,17 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { refreshScrollTriggers } from "@/lib/animateIn";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) return;
+    if (reduced) {
+      refreshScrollTriggers(50);
+      return;
+    }
 
     const lenis = new Lenis({
       duration: 1.15,
@@ -29,9 +33,18 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     document.documentElement.classList.add("lenis", "lenis-smooth");
 
+    // Expose for debugging / manual refresh after layout
+    (window as unknown as { __lenis?: Lenis }).__lenis = lenis;
+
+    refreshScrollTriggers(120);
+    const onResize = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", onResize);
+
     return () => {
+      window.removeEventListener("resize", onResize);
       gsap.ticker.remove(ticker);
       lenis.destroy();
+      delete (window as unknown as { __lenis?: Lenis }).__lenis;
       document.documentElement.classList.remove("lenis", "lenis-smooth");
     };
   }, []);

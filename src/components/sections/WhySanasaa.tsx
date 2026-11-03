@@ -31,23 +31,27 @@ export default function WhySanasaa() {
     if (!root.current || reduced) return;
     const ctx = gsap.context(() => {
       const cards = gsap.utils.toArray<HTMLElement>(".why-card");
-      cards.forEach((card, i) => {
-        gsap.from(card, {
-          y: 80,
-          opacity: 0,
-          rotateY: i % 2 === 0 ? 12 : -12,
-          duration: 1,
+      gsap.fromTo(
+        cards,
+        { y: 48, autoAlpha: 0.45 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          stagger: 0.1,
+          duration: 0.85,
           ease: "power3.out",
-          scrollTrigger: { trigger: card, start: "top 85%" },
-        });
-      });
-
+          immediateRender: false,
+          scrollTrigger: { trigger: root.current, start: "top 80%", once: true },
+        },
+      );
       gsap.to(".why-blob", {
         xPercent: 20,
         yPercent: -10,
         ease: "none",
         scrollTrigger: { trigger: root.current, scrub: true, start: "top bottom", end: "bottom top" },
       });
+      const safety = window.setTimeout(() => gsap.set(cards, { clearProps: "opacity,visibility,transform" }), 4000);
+      return () => window.clearTimeout(safety);
     }, root);
     return () => ctx.revert();
   }, [reduced]);
