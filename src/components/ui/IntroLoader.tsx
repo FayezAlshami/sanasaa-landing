@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
+import { withBase } from "@/lib/basePath";
 
 export default function IntroLoader() {
   const overlay = useRef<HTMLDivElement>(null);
@@ -54,7 +55,7 @@ export default function IntroLoader() {
         />
         <div ref={logo} className="relative z-10">
           <Image
-            src="/brand/logo-white.svg"
+            src={withBase("/brand/logo-white.svg")}
             alt=""
             width={220}
             height={110}

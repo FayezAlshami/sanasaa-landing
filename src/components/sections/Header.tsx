@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { NAV } from "@/lib/constants";
 import MagneticButton from "../ui/MagneticButton";
+import { withBase } from "@/lib/basePath";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +26,7 @@ export default function Header() {
     >
       <div className="container-wide flex items-center justify-between gap-4 px-5 md:px-8">
         <a href="#top" className="relative z-10" data-cursor="grow">
-          <Image src="/brand/logo-white.svg" alt="سنسعى" width={140} height={70} className="h-10 w-auto md:h-12" priority />
+          <Image src={withBase("/brand/logo-white.svg")} alt="سنسعى" width={140} height={70} className="h-10 w-auto md:h-12" priority />
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex">

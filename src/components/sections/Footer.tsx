@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { NAV, SITE } from "@/lib/constants";
+import { withBase } from "@/lib/basePath";
 
 export default function Footer() {
   return (
     <footer className="border-t border-gold/10 bg-navy-deep section-pad !py-12">
       <div className="container-wide grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <Image src="/brand/logo-white.svg" alt="سنسعى" width={140} height={70} className="h-12 w-auto" />
+          <Image src={withBase("/brand/logo-white.svg")} alt="سنسعى" width={140} height={70} className="h-12 w-auto" />
           <p className="mt-4 max-w-sm text-sm leading-7 text-muted">{SITE.description}</p>
         </div>
         <div>

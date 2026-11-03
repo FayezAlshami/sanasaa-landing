@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers/Providers";
+import { withBase } from "@/lib/basePath";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -20,11 +21,11 @@ export const metadata: Metadata = {
     description: "ادرس بثقة، تدرّب بذكاء، وتفوّق في البكالوريا مع سنسعى.",
     locale: "ar_SY",
     type: "website",
-    images: ["/brand/logo.png"],
+    images: [withBase("/brand/logo.png")],
   },
   icons: {
-    icon: "/brand/logo.png",
-    apple: "/brand/logo.png",
+    icon: withBase("/brand/logo.png"),
+    apple: withBase("/brand/logo.png"),
   },
 };
 

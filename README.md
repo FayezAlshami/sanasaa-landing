@@ -4,6 +4,12 @@
 
 Sanasaa secondary-education landing page (Arabic RTL) built with a full cinematic stack.
 
+## Live site (GitHub Pages)
+
+https://fayezalshami.github.io/sanasaa-landing/
+
+Static export with `basePath` `/sanasaa-landing`. Deploy via GitHub Actions on `main`, or the `gh-pages` branch fallback.
+
 ## Stack
 
 - **Next.js** (App Router, TypeScript)

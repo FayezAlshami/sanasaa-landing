@@ -11,6 +11,7 @@ import {
 import { Suspense, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { usePrefersReducedMotion } from "@/hooks/useMediaQuery";
+import { withBase } from "@/lib/basePath";
 
 function Book({
   position,
@@ -42,7 +43,7 @@ function Book({
 }
 
 function LogoPlane() {
-  const texture = useLoader(THREE.TextureLoader, "/brand/logo-white.png");
+  const texture = useLoader(THREE.TextureLoader, withBase("/brand/logo-white.png"));
   const ref = useRef<THREE.Mesh>(null);
   useFrame((state) => {
     if (!ref.current) return;

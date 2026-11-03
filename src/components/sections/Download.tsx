@@ -7,6 +7,7 @@ import Image from "next/image";
 import MagneticButton from "../ui/MagneticButton";
 import TextReveal from "../ui/TextReveal";
 import { usePrefersReducedMotion } from "@/hooks/useMediaQuery";
+import { withBase } from "@/lib/basePath";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +68,7 @@ export default function Download() {
               <div className="absolute inset-0 rounded-[2rem] bg-gold/20 blur-3xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-gold/25 bg-navy-deep p-6 text-center">
                 <Image
-                  src="/brand/logo-white.svg"
+                  src={withBase("/brand/logo-white.svg")}
                   alt="سنسعى"
                   width={200}
                   height={100}
